@@ -88,9 +88,17 @@ hr {
     color: yellow !important;
 }
 
+.blog-entry-main p{
+    /* background-color: red; */
+    padding-left: 10px;
+    margin-left: 0px;
+    text-align: left;
+}
+
 .title-line{
     background-color: #f9dee3;
     color: rgb(7, 7, 134);
+    padding: 9px;
 }
 .date-time{
     font-size: 12px;
