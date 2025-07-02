@@ -1,17 +1,17 @@
 
 const canvas = document.querySelector('canvas')
-canvas.width = window.innerWidth * 10/11;
-canvas.height = window.innerHeight * 7/9;
+canvas.width = window.innerWidth * 8/11;
+canvas.height = window.innerHeight * 5/9;
 
 const c = canvas.getContext("2d");
-let xpadding = 100;
-let ypadding = 100;
+let xpadding = 10;
+let ypadding = 10;
 let gameOver = false;
 let snake = []
 let apples = [];
 let allApplesEver = 0;
 var snakeColour;
-var snakeSize = 25;
+var snakeSize = 15;
 var peiceSeparation = -3;
 var delay = 100; 
 var lastTime = 0;
@@ -39,8 +39,8 @@ var border =
 
 function resizeWindow(event)
 {
-    canvas.width = window.innerWidth * 10/11;
-    canvas.height = window.innerHeight * 7/9;
+    canvas.width = window.innerWidth * 8/11;
+    canvas.height = window.innerHeight * 5/9;
 }
 window.addEventListener('resize', resizeWindow);
 
@@ -297,7 +297,7 @@ function draw()
     c.fillStyle = "black";
     c.textAlign = "center"; // Center align the text horizontally
     c.textBaseline = "middle"; // Center align the text vertically
-    c.fillText(score, window.innerWidth/2 * 10/11, 50);
+    c.fillText(score, window.innerWidth/2 * 8/11, 50);
 }
 
 function drawSetup()
@@ -423,7 +423,7 @@ function showGameOverScreen()
     c.textAlign = "center"; // Center align the text horizontally
     c.textBaseline = "middle"; // Center align the text vertically
     let text = "UH OHHHH YA LOST BABES PRESS SPACEBAR TO PLAY AGAIN"
-    c.fillText(text,window.innerWidth/2 * 10/11, window.innerHeight/2 * 7/9);
+    c.fillText(text,window.innerWidth/2 * 8/11, window.innerHeight/2 * 5/9);
 }
 
 function showStartScreen()
@@ -442,7 +442,7 @@ function showStartScreen()
     c.textAlign = "center"; // Center align the text horizontally
     c.textBaseline = "middle"; // Center align the text vertically
     let text = "HELLO PRESS SPACEBAR TO BEGIN PLAYING!"
-    c.fillText(text, window.innerWidth/2 * 10/11, window.innerHeight/2 * 7/9);
+    c.fillText(text, window.innerWidth/2 * 8/11, window.innerHeight/2 * 5/9);
 }
 
 window.onload = function()

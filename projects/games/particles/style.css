@@ -1,0 +1,26 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-position: center;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+#board{
+    background-color: black;
+}
+
+.game-backbuttons h3{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.game-backbuttons h3:hover{
+    background-color: rgb(252, 224, 229);
+}
+
+.game-backbuttons a{
+    text-decoration: none;
+    color:black;
+}

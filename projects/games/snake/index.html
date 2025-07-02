@@ -18,10 +18,27 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
         }
+        .game-backbuttons h3{
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .game-backbuttons h3:hover{
+            background-color: rgb(252, 224, 229);
+        }
+
+        .game-backbuttons a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>snake</h1>
+    <div class="game-backbuttons"><h3>
+        <a href="../../../pages/projects.html">
+            &lt;&lt; back &gt;&gt;
+        </a>
+        </h3></div>
+    <h1>snake (WASD)</h1>
     <canvas></canvas>
     <script src="canvas.js"></script>
     <p>You know the rules bae, get as long as you can without hitting the borders</p>
