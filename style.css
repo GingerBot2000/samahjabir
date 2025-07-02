@@ -163,6 +163,8 @@ hr {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
+    color: #201933;
+    background-color: white;
 
     width:200px;
 }
@@ -173,7 +175,7 @@ hr {
 }
 
 .project:hover{
-    background-color: white;
+    background-color: pink;
 }
 
 .project:active{
