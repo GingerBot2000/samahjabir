@@ -176,13 +176,19 @@ hr {
     flex-direction: row;
 }
 
+#projects-container{
+  display: flex;
+  justify-content: center; 
+  gap: 30px;               
+  flex-wrap: wrap;         /* keeps it nice on small screens */
+}
+
 .project{
     /* background-color: pink; */
     display:grid;
     padding : 10px;
     margin:30px;
     margin-top: 10px;
-    margin-left: 65px;
 
     text-align: center;
     font-size: 30px;
