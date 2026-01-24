@@ -26,6 +26,7 @@ p{
 
 .container{
   width: min(900px, 92vw);
+  padding: 0 1.25rem;
   margin: 0 auto;
 }
 
@@ -131,6 +132,10 @@ hr {
     flex-direction: row;
     flex-wrap: wrap;
     
+}
+
+.center-text {
+  text-align: center;
 }
 
 .contact{
