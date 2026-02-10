@@ -212,6 +212,44 @@ hr {
     background-color: pink;
 }
 
+.order-label {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    color: #555;
+}
+
+.order-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+
+    /* Custom arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 12px;
+}
+
+.order-select:hover {
+    border-color: #999;
+}
+
+.order-select:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+
 #about-section{
     background-color: white;
     margin: 20px;
@@ -274,3 +312,5 @@ hr {
         width: 100%;
     }
 }
+
+
