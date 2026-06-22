@@ -22,56 +22,86 @@
         </div>
     </header>
 
-    <!-- <label for="orderBy" class="order-label">Order by</label>
-    <select id="orderBy" class="order-select">
-        <option value="newest">newest first</option>
-        <option value="oldest">oldest first</option>
-        <option value="title-asc">title A-Z</option>
-        <option value="title-desc">title Z-A</option>
-    </select> -->
-
-
+    <div class="blog-controls container">
+        <div class="blog-filters">
+            <span class="filter-label">filter by tag:</span>
+            <div class="tag-filters">
+                <button class="tag-filter active" data-tag="all">all</button>
+                <button class="tag-filter" data-tag="philosophy">philosophy</button>
+                <button class="tag-filter" data-tag="psychology">psychology</button>
+                <button class="tag-filter" data-tag="society">society</button>
+                <button class="tag-filter" data-tag="art">art</button>
+                <button class="tag-filter" data-tag="technology">technology</button>
+                <button class="tag-filter" data-tag="history">history</button>
+                <button class="tag-filter" data-tag="creative writing">creative writing</button>
+            </div>
+        </div>
+        <div class="blog-sort">
+            <label for="orderBy" class="order-label">sort:</label>
+            <select id="orderBy" class="order-select">
+                <option value="newest">newest first</option>
+                <option value="oldest">oldest first</option>
+                <option value="title-asc">title A-Z</option>
+                <option value="title-desc">title Z-A</option>
+            </select>
+        </div>
+    </div>
 
     <section class="blog-list container">
-    
-        <!-- <article class="blog-entry">
+
+        <!-- <article class="blog-entry" data-tags="psychology,relationships">
             <h3><a href="blogs/blog1.html">why do we experience the ick?</a></h3>
             <time datetime="2025-12-21">21-12-2025</time>
-            <p>Imagine this: you’re about to meet someone on a first date. You don’t really know them, but your friend said you’d be a good match, and they are just your type on paper; you both want a relationship, you’re in the same stage of life…</p>
+            <div class="entry-tags">
+                <span class="tag">psychology</span>
+                <span class="tag">relationships</span>
+            </div>
+            <p>Imagine this: you're about to meet someone on a first date. You don't really know them, but your friend said you'd be a good match, and they are just your type on paper; you both want a relationship, you're in the same stage of life…</p>
         </article> -->
 
-        <article class="blog-entry">
-            <h3><a href="blogs/blog5.html">Why does Art make you cry?</a></h3>
+        <article class="blog-entry" data-tags="art,psychology,philosophy">
+            <h3><a href="blogs/why_does_art_make_you_cry.html">Why does Art make you cry?</a></h3>
             <time datetime="2026-02-28">28-02-2026</time>
+            <div class="entry-tags">
+                <span class="tag">art</span>
+                <span class="tag">psychology</span>
+                <span class="tag">philosophy</span>
+            </div>
             <p>Have you ever cried whilst experiencing art? Be it painting, song, performance or prose. I tried thinking back to the last time I cried to art and gave a null until I remembered art encompasses much more than traditional fine paintings. The last time I cried was to a song. Why? I already felt terrible, and the song carefully pinched and pulled those feelings out of me. That is the crux of why art makes you cry: a strong emotional reaction.</p>
         </article>
 
-        <article class="blog-entry">
-            <h3><a href="blogs/blog2.html">the "perfect" community</a></h3>
+        <article class="blog-entry" data-tags="philosophy,society">
+            <h3><a href="blogs/the_perfect_community.html">the "perfect" community</a></h3>
             <time datetime="2025-12-10">10-12-2025</time>
+            <div class="entry-tags">
+                <span class="tag">philosophy</span>
+                <span class="tag">society</span>
+            </div>
             <p>Building what a community should look like has been a question for all of human civilisation and has morphed into many forms, with different levels of success for the overall happiness of the people. It is a difficult question with many incomplete answers…</p>
         </article>
 
-        <article class="blog-entry">
-            <h3><a href="blogs/blog3.html">a brief history of the design of mobile phones</a></h3>
+        <article class="blog-entry" data-tags="technology,history">
+            <h3><a href="blogs/a_brief_history_of_the_design_of_mobile_phones.html">a brief history of the design of mobile phones</a></h3>
             <time datetime="2026-02-04">4-02-2026</time>
+            <div class="entry-tags">
+                <span class="tag">technology</span>
+                <span class="tag">history</span>
+            </div>
             <p>The development of mobile phones has been marked by a general trend of becoming more portable and offering more functionality. In the first wave of HCI (1980s) mobile phones were very new and were used exclusively for calling. Heavy bricks of hardware that you kept at home...</p>
         </article>
 
-         <article class="blog-entry">
-            <h3><a href="blogs/blog4.html">The supermarket - an unexpected animal</a></h3>
+        <article class="blog-entry" data-tags="creative writing">
+            <h3><a href="blogs/The_supermarket_an_unexpected_animal.html">The supermarket - an unexpected animal</a></h3>
             <time datetime="2024-11-18">18-11-2024</time>
+            <div class="entry-tags">
+                <span class="tag">creative writing</span>
+            </div>
             <p>I wrote this as part of a creative writing workshop that I attended and every so often the facilitator interjected with an addition we had to add to the story. If my memory serves me well, a lot of it was adding "unexpted events" or "twists"...</p>
         </article>
 
-
     </section>
 
-
-
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="../scripts/blog-sort.js"></script>
 </body>
 </html>
