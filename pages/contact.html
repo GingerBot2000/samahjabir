@@ -3,58 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samah's Yapp</title>
+    <title>Samah's contact</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="accent-orange">
             <ul>
-                <li><a href="../index.html">home</a> </li>
+                <li><a href="../index.html">home</a></li>
                 <li><a href="blogs.html">blogs</a></li>
                 <li><a href="projects.html">projects</a></li>
-                <!-- <li><a href="about.html">about</a></li> -->
-                <li><a href="contact.html">contact</a></li>
+                <li><a href="contact.html" aria-current="page">contact</a></li>
             </ul>
         </nav>
-        <div class="nav-title">
-            <h1>contacts</h1>
-        </div>
     </header>
-    <br><br><br>
-    <section id="contacts-container" class="box-container">
-        <section class="contact" id="youtube-contact">
-            <a href="https://m.youtube.com/@samahjj">
-                <img src="../images/icons/youtube1.png" alt="youtube icon" width="50px">
-            </a>
-            youtube
-        </section>
-        <section class="contact" id="instagram-contact">
-            <a href="https://www.instagram.com/samah.jpeg?igsh=bXlocXd5MHF6Y2kx&utm_source=qr">
-                <img src="../images/icons/insta1.png" alt="instagram icon" width="50px">
-            </a>
-            instagram
-        </section>
-        <!-- <section class="contact" id="twitter">
-            <a href="https://twitter.com">
-                <img src="../images/icons/twitter1.png" alt="twitter icon" width="50px">
-            </a>
-            twitter
-        </section> -->
 
-        <section class="contact" id="github">
-            <a href="https://github.com/GingerBot2000">
-                <img src="../images/icons/github1.png" alt="github icon" width="50px">
-            </a>
-            github
-        </section>
+    <section class="hero accent-orange">
+        <p class="label">Find me elsewhere</p>
+        <h1>contact</h1>
     </section>
-        <section class="bottom-contact">
-            To email me : samah.jabir2@gmail.com
-        </section>
-    <footer>
 
+    <section class="section container accent-orange">
+        <div class="contact-list">
+            <a class="contact" href="https://m.youtube.com/@samahjj">
+                <img src="../images/icons/youtube1.png" alt="">
+                <span class="contact-name">youtube</span>
+                <span class="label">@samahjj</span>
+            </a>
+            <a class="contact" href="https://www.instagram.com/samah.jpeg?igsh=bXlocXd5MHF6Y2kx&utm_source=qr">
+                <img src="../images/icons/insta1.png" alt="">
+                <span class="contact-name">instagram</span>
+                <span class="label">@samah.jpeg</span>
+            </a>
+            <a class="contact" href="https://github.com/GingerBot2000">
+                <img src="../images/icons/github1.png" alt="">
+                <span class="contact-name">github</span>
+                <span class="label">GingerBot2000</span>
+            </a>
+        </div>
+
+        <div class="email-block">
+            <p class="label">Or just email me!</p>
+            <a href="mailto:samah.jabir2@gmail.com">samah.jabir2@gmail.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <span class="label">Samah Jabir</span>
+        <span class="label">2026</span>
     </footer>
-    <script src="../script.js"></script>
 </body>
 </html>

@@ -3,52 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samah :D</title>
+    <title>Samah says hello</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="accent-blue">
             <ul>
-                <li><a href="index.html">home</a> </li>
+                <li><a href="index.html" aria-current="page">home</a></li>
                 <li><a href="pages/blogs.html">blogs</a></li>
                 <li><a href="pages/projects.html">projects</a></li>
-                <!-- <li><a href="pages/about.html">about</a></li> -->
                 <li><a href="pages/contact.html">contact</a></li>
             </ul>
         </nav>
-        <div class="nav-title">
-            <h1>hello</h1>
-        </div>
     </header>
-    <!-- <section>
-        <div class="title"><h1><strong>Welcome to Samah!</strong></h1></div>
-    </section> -->
-    <section id = "intro_paragraphs">
-    <section class="container">
-        <br> <br> <br>
-        <p class="center-text">
-           Hello! I'm currently a 2nd year student studying Computer Science at Cambridge.
-        </p>
-        <br><br>
-        <p>
-            <u>Currently I am working on : </u> <br>
-            -> this website<br>
-            -> getting more steps in <br>
-            -> learning C <br>
-            -> improv comedy <br>
-            -> getting an internship <br>
-        </p>
-        <br><br>
-        <p class="center-text">
-            have a look around, press some buttons, if u have any feedback or just want to contact me : samah.jabir2@gmail.com
-        </p>
+
+    <section class="hero accent-blue">
+        <p class="label">Samah Jabir — Cambridge, UK</p>
+        <h1>hello</h1>
+        <p class="hero-meta">Third-year Computer Science student at Cambridge. I write, I build small things, and I put both here.</p>
     </section>
-        </section>
+
+    <section class="section container">
+        <div class="split accent-blue">
+            <div class="col-left">
+                <p class="label mark">Currently</p>
+                <ul class="now-list">
+                    <li>getting back into writing</li>
+                    <li>getting more steps in</li>
+                    <li>learning C</li>
+                    <li>improv comedy</li>
+                    <li>actually reading my tbr list</li>
+                    <li>thinking about a career that does good</li>
+                </ul>
+            </div>
+            <div class="col-right">
+                <h2>have a look around</h2>
+                <p style="margin-top:1.5rem;">Press some buttons. There are essays under <a href="pages/blogs.html" style="border-bottom:2px solid var(--blue);">blogs</a> and browser games under <a href="pages/projects.html" style="border-bottom:2px solid var(--blue);">projects</a>.</p>
+            </div>
+            <div class="offset-block">
+                <p class="label">feel free to contact me :)</p>
+                <p style="font-size:clamp(1.1rem,3vw,2rem);font-weight:700;letter-spacing:-0.04em;margin:0.5rem 0 0;">samah.jabir2@gmail.com</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-
+        <span class="label">Samah Jabir</span>
+        <span class="label">2026</span>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

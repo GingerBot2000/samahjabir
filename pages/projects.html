@@ -3,42 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samah's Yapp</title>
+    <title>Samah's projects</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="accent-blue">
             <ul>
-                <li><a href="../index.html">home</a> </li>
+                <li><a href="../index.html">home</a></li>
                 <li><a href="blogs.html">blogs</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <!-- <li><a href="about.html">about</a></li> -->
+                <li><a href="projects.html" aria-current="page">projects</a></li>
                 <li><a href="contact.html">contact</a></li>
             </ul>
         </nav>
-        <div class="nav-title">
-            <h1>projects</h1>
-        </div>
     </header>
-    <section>
-        <div class="title"><h5><strong>Games</strong></h5></div>
-    </section>
-    <section section id="projects-container" class="box-container">
-        <a href="../projects/games/snake/index.html" class="project" id="game_snake">
-            snake
-        </a>
 
-        <a href="../projects/games/particles/index.html" class="project" id="game_particles">
-            particles
-        </a>
-
-        <a href="../projects/games/cube/index.html" class="project" id="game_cube">
-            cube
-        </a>
+    <section class="hero accent-blue">
+        <p class="label">Things I built — mostly in the browser</p>
+        <h1>projects</h1>
     </section>
 
-    <footer></footer>
-    <script src="../script.js"></script>
+    <section class="section container accent-blue">
+        <div class="section-head">
+            <h2>games</h2>
+            <span class="label">03 — playable</span>
+        </div>
+
+        <div class="project-grid">
+            <a href="../projects/games/snake/index.html" class="project">
+                <span class="project-name">snake</span>
+                <span class="label">Canvas · JavaScript</span>
+            </a>
+            <a href="../projects/games/particles/index.html" class="project">
+                <span class="project-name">particles</span>
+                <span class="label">Canvas · Simulation</span>
+            </a>
+            <a href="../projects/games/cube/index.html" class="project">
+                <span class="project-name">cube</span>
+                <span class="label">3D · Rendering</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <span class="label">Samah Jabir</span>
+        <span class="label">2026</span>
+    </footer>
 </body>
 </html>
