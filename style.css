@@ -3,7 +3,7 @@
 /* ══════════════════════════════════════════════════════════
    SWISS MINIMALIST / BOLD GRAPHIC
    white + light grey ground · black type & rules
-   electric blue and orange as full-bleed section blocks
+   electric blue and pink as full-bleed section blocks
    motif: the solid square ■
 ══════════════════════════════════════════════════════════ */
 
@@ -17,7 +17,10 @@
   --white:      #ffffff;
 
   --blue:       #0028ff;
-  --orange:     #ff4dc7;
+  /* --pink:     #ff4dc7; */
+
+  /* --blue: #0a0a0a; */
+  --pink: #0a0a0a;
 
   --rule:       1px solid var(--black);
   --rule-thick: 2px solid var(--black);
@@ -28,7 +31,7 @@
 
 /* One bold colour per section — never mixed. Sections opt in. */
 .accent-blue   { --accent: var(--blue); }
-.accent-orange { --accent: var(--orange); }
+.accent-pink { --accent: var(--pink); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -173,19 +176,8 @@ nav a[aria-current="page"]::after { width: 100%; }
   color: rgba(255, 255, 255, 0.88);
 }
 
-/* Motif: outlined square bleeding off the right edge of the hero */
 .hero {
   position: relative;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  top: -8%;
-  right: -6%;
-  width: clamp(140px, 22vw, 320px);
-  aspect-ratio: 1;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  pointer-events: none;
 }
 
 /* ──────────────────────────────────────
@@ -362,16 +354,6 @@ nav a[aria-current="page"]::after { width: 100%; }
   color: var(--white);
   padding: clamp(2.5rem, 7vw, 5rem) var(--gutter) clamp(2rem, 4vw, 3rem);
   overflow: hidden;
-}
-
-.title-line::after {
-  content: "";
-  position: absolute;
-  bottom: -14%;
-  right: -4%;
-  width: clamp(120px, 18vw, 260px);
-  aspect-ratio: 1;
-  border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
 .title-line h2 { color: var(--white); max-width: 18ch; }
@@ -566,6 +548,4 @@ footer .label { color: var(--grey-600); }
   .blog-controls { align-items: flex-start; flex-direction: column; }
 
   .contact .label { display: none; }
-
-  .hero::after, .title-line::after { display: none; }
 }
