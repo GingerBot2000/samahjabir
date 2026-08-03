@@ -24,6 +24,67 @@
         <div class="date-time">Wednesday 10 December 2025</div>
     </section>
 
+    <!-- Audio player: sibling of #blog-content, NEVER a child — blog-loader.js
+         replaces #blog-content's innerHTML wholesale, which would wipe it. -->
+    <section class="audio-bar" id="audio-bar" data-audio-player hidden
+             aria-label="Listen to this post">
+      <div class="audio-bar__inner">
+
+        <p class="label audio-bar__label">Listen</p>
+
+        <div class="audio-bar__controls">
+          <button type="button" class="audio-btn audio-btn--skip"
+                  data-audio-back aria-label="Rewind 15 seconds" disabled>
+            <span class="audio-btn__glyph" aria-hidden="true">&#8630;</span>
+            <span class="audio-btn__num" aria-hidden="true">15</span>
+          </button>
+
+          <button type="button" class="audio-btn audio-btn--play"
+                  data-audio-toggle aria-label="Play" aria-pressed="false">
+            <span class="audio-icon audio-icon--play" aria-hidden="true"></span>
+            <span class="audio-icon audio-icon--pause" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="audio-btn audio-btn--skip"
+                  data-audio-fwd aria-label="Forward 15 seconds" disabled>
+            <span class="audio-btn__glyph" aria-hidden="true">&#8631;</span>
+            <span class="audio-btn__num" aria-hidden="true">15</span>
+          </button>
+        </div>
+
+        <div class="audio-bar__track-wrap">
+          <div class="audio-track" data-audio-track
+               role="slider" tabindex="-1"
+               aria-label="Seek through recording"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+               aria-valuetext="0 seconds of 0 seconds" aria-disabled="true">
+            <div class="audio-track__buffered" data-audio-buffered></div>
+            <div class="audio-track__played"   data-audio-played></div>
+            <div class="audio-track__handle"   data-audio-handle aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <p class="audio-time" data-audio-time>
+          <span data-audio-current>0:00</span><span
+            class="audio-time__sep" aria-hidden="true">/</span><span
+            data-audio-duration>--:--</span>
+        </p>
+
+        <div class="audio-speed" role="group" aria-label="Playback speed">
+          <button type="button" class="audio-speed__btn is-active"
+                  data-audio-rate="1"    aria-pressed="true">1&times;</button>
+          <button type="button" class="audio-speed__btn"
+                  data-audio-rate="1.25" aria-pressed="false">1.25&times;</button>
+          <button type="button" class="audio-speed__btn"
+                  data-audio-rate="1.5"  aria-pressed="false">1.5&times;</button>
+          <button type="button" class="audio-speed__btn"
+                  data-audio-rate="2"    aria-pressed="false">2&times;</button>
+        </div>
+
+        <audio data-audio-el preload="metadata" playsinline></audio>
+      </div>
+    </section>
+
     <article class="blog-entry-main" id="blog-content">
         <p class="blog-content-loading">loading…</p>
     </article>
@@ -37,5 +98,6 @@
     <script src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
     <script src="../../scripts/blog-loader.js"></script>
+    <script src="../../scripts/blog-audio.js"></script>
 </body>
 </html>
