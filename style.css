@@ -233,6 +233,19 @@ nav a[aria-current="page"]::after { width: 100%; }
   background: var(--white);
 }
 
+/* Inline text links — hover fills solid with the section accent */
+.inline-link {
+  color: var(--black);
+  border-bottom: 2px solid var(--accent, var(--blue));
+  padding: 0 0.15em;
+  margin: 0 -0.15em;
+  transition: color 120ms ease, background-color 120ms ease;
+}
+.inline-link:hover {
+  color: var(--white);
+  background-color: var(--accent, var(--blue));
+}
+
 /* Working-on list, motif-marked */
 .now-list { list-style: none; margin: 0; padding: 0; }
 
