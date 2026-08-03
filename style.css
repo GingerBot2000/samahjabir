@@ -503,17 +503,28 @@ nav a[aria-current="page"]::after { width: 100%; }
 .audio-btn--play:hover { background: var(--accent, var(--black)); }
 
 .audio-btn--skip {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.75rem;
   flex-direction: column;
+  gap: 0.1rem;
   line-height: 1;
 }
-.audio-btn__glyph { font-size: 0.95rem; }
+.audio-btn__glyph {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
 .audio-btn__num {
-  font-size: 0.5rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
-  margin-top: -0.1rem;
+  letter-spacing: 0.02em;
+}
+.audio-btn__unit {
+  display: block;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  vertical-align: baseline;
+  margin-top: -0.05rem;
 }
 
 /* play / pause glyphs */
