@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* TEST — body/prose text uses Space Mono; headings, captions, dates, nav,
+   the audio player, emails, and the contact page stay on Goudy Bookletter
+   1911 (see the explicit .goudy-family overrides below each of those). */
+@font-face {
+  font-family: 'boxy';
+  src: url('fonts/boxy.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
 
 /* ══════════════════════════════════════════════════════════
    SWISS MINIMALIST / BOLD GRAPHIC
@@ -42,7 +53,7 @@ body {
   padding: 0;
   background: var(--white);
   color: var(--black);
-  font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Space Mono', 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.55;
@@ -62,8 +73,19 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-h1 { font-size: clamp(3.5rem, 13vw, 11rem); }
-h2 { font-size: clamp(2.25rem, 7vw, 5rem); }
+/* TEST BLOCK START — calligraphy heading swap, delete this rule + the
+   @font-face at the top of the file to revert */
+h1, h2, h3, h4, h5 {
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  text-transform: none;
+}
+/* TEST BLOCK END */
+
+h1 { font-size: clamp(4rem, 14vw, 12rem); }
+h2 { font-size: clamp(2.75rem, 8vw, 5.5rem); }
 h3 { font-size: clamp(1.35rem, 2.6vw, 2rem); letter-spacing: -0.035em; line-height: 1.02; }
 h4 { font-size: 1.15rem; letter-spacing: -0.02em; }
 
@@ -76,6 +98,7 @@ strong { font-weight: 600; }
 
 /* Small caps label — the structural micro-type of the system */
 .label {
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -122,6 +145,7 @@ nav {
   gap: 2rem;
   padding: 1.1rem var(--gutter);
   border-bottom: var(--rule);
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
 }
 
 nav ul { display: flex; gap: 2.25rem; margin: 0; padding: 0; list-style: none; }
@@ -172,6 +196,7 @@ nav a[aria-current="page"]::after { width: 100%; }
 .hero-meta {
   margin-top: clamp(1.5rem, 4vw, 3rem);
   max-width: 46ch;
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.88);
 }
@@ -335,6 +360,7 @@ nav a[aria-current="page"]::after { width: 100%; }
 
 .blog-entry time {
   grid-column: 1;
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -400,6 +426,7 @@ nav a[aria-current="page"]::after { width: 100%; }
 
 .title-line .date-time {
   margin-top: 1.25rem;
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -413,6 +440,12 @@ nav a[aria-current="page"]::after { width: 100%; }
   max-width: 1440px;
   margin-inline: auto;
   padding: clamp(2.5rem, 6vw, 5rem) var(--gutter) clamp(4rem, 10vw, 8rem);
+}
+
+/* Less bottom breathing room when an image follows directly after —
+   the image's own spacing takes over from here */
+.blog-entry-main:has(+ .post-image) {
+  padding-bottom: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .blog-entry-main > * { max-width: var(--measure); margin-left: 0; }
@@ -430,6 +463,27 @@ nav a[aria-current="page"]::after { width: 100%; }
 .blog-entry-main h3 { font-size: 1.3rem; }
 
 .blog-entry-main img { max-width: 100%; height: auto; }
+
+/* Standalone illustration between a post's body and the footer.
+   The column sits flush-left, same width as the article text;
+   the image itself is centered within that column. */
+.post-image {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--gutter) clamp(3rem, 7vw, 5rem);
+}
+
+.post-image__col {
+  max-width: var(--measure);
+}
+
+.post-image img {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+}
 
 .blog-content-loading {
   font-size: 0.72rem;
@@ -738,6 +792,7 @@ nav a[aria-current="page"]::after { width: 100%; }
 .contact img { width: 34px; height: 34px; object-fit: contain; }
 
 .contact-name {
+  font-family: 'Goudy Bookletter 1911', 'Space Grotesk', serif;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
   letter-spacing: -0.04em;
