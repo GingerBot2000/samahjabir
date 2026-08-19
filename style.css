@@ -62,6 +62,26 @@ body {
 }
 
 /* ──────────────────────────────────────
+   TEXT SELECTION — bright blue everywhere;
+   inverted (white on the section's own blue)
+   wherever the background is already blue
+────────────────────────────────────── */
+::selection {
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* Only the components that actually paint a blue background need the
+   invert — .accent-blue alone just marks the accent colour for hover
+   states and sits on plain white paper, where blue selection is fine */
+.hero.accent-blue ::selection,
+.title-line.accent-blue ::selection,
+.section-block.accent-blue ::selection {
+  background: var(--white);
+  color: var(--blue);
+}
+
+/* ──────────────────────────────────────
    TYPE SCALE — oversized headings as graphics
 ────────────────────────────────────── */
 h1, h2, h3, h4, h5 {
