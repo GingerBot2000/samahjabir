@@ -44,6 +44,17 @@
 .accent-blue   { --accent: var(--blue); }
 .accent-pink { --accent: var(--pink); }
 
+/* Title bands (.hero, .title-line) use a textured photo instead of a
+   flat colour fill, matched to whichever accent the section carries */
+.hero.accent-blue,
+.title-line.accent-blue {
+  background-image: url('images/Blue_Background.webp');
+}
+.hero.accent-pink,
+.title-line.accent-pink {
+  background-image: url('images/Black_Background.webp');
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -198,7 +209,7 @@ nav a[aria-current="page"]::after { width: 100%; }
    oversized title bleeding off the grid
 ────────────────────────────────────── */
 .hero {
-  background: var(--accent, var(--black));
+  background: var(--accent, var(--black)) center / cover no-repeat;
   color: var(--white);
   padding: clamp(3rem, 9vw, 7rem) var(--gutter) clamp(2.5rem, 6vw, 4.5rem);
   overflow: hidden;
@@ -436,7 +447,7 @@ nav a[aria-current="page"]::after { width: 100%; }
 ────────────────────────────────────── */
 .title-line {
   position: relative;
-  background: var(--accent, var(--black));
+  background: var(--accent, var(--black)) center / cover no-repeat;
   color: var(--white);
   padding: clamp(2.5rem, 7vw, 5rem) var(--gutter) clamp(2rem, 4vw, 3rem);
   overflow: hidden;
